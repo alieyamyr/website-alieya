@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        90deg,
+        #fff3a6,
+        #ffd1e8,
+        #ffb6ff
+    );
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #8f49ff;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+/* Button reset */
+.nav-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+    color: #8f49ff;
+}
+
+.contact {
+    font-weight: bold;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title h1 {
+    font-size: 36px;
+    font-family: serif;
+    font-weight: normal;
+}
+
+/* GALLERY */
+.gallery {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* Slider container */
+.slider-container {
+    width: 1040px; /* 3 images centered */
+    overflow: hidden;
+}
+
+/* Images */
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    transition: transform 0.5s ease;
+}
+
+.images img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Arrows */
+.arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    gap: 40px;
+}
+
+/* Social icons */
+.social-link {
+    font-size: 28px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #8f49ff;
+}

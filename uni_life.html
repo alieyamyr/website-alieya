@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uni Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="uni_life2.css">
+</head>
+<body>
+
+     <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">ALIEYA !</div>
+
+        <nav class="nav-links">
+            <button class="nav-btn">HOME</button>
+            <button class="nav-btn">ABOUT</button>
+            <button class="nav-btn">RESUME</button>
+        </nav>
+
+        <button class="nav-btn contact">CONTACT</button>
+    </header>
+
+    <!-- Title -->
+    <section class="title">
+        <h1>Uni Life</h1>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+
+        <!-- Left Arrow -->
+        <button class="arrow left" onclick="prevSlide()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Slider -->
+        <div class="slider-container">
+            <div class="images" id="slider">
+                <img src="IMG/pic_3.jpg" alt="">
+                <img src="IMG/pic_4.jpg" alt="">
+                <img src="IMG/pic_5.jpg" alt="">
+				<img src="IMG/pic_3.jpg" alt="">
+                <img src="IMG/pic_4.jpg" alt="">
+                <img src="IMG/pic_5.jpg" alt="">
+				<img src="IMG/pic_3.jpg" alt="">
+                <img src="IMG/pic_4.jpg" alt="">
+                <img src="IMG/pic_5.jpg" alt="">
+				
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow right" onclick="nextSlide()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        const slider = document.getElementById("slider");
+        let index = 0;
+        const imageWidth = 400; // image + gap
+
+        function updateSlide() {
+            slider.style.transform = `translateX(${-index * imageWidth}px)`;
+        }
+
+        function nextSlide() {
+            index++;
+            if (index > 2) index = 0;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            index--;
+            if (index < 0) index = 2;
+            updateSlide();
+        }
+    </script>
+	<!-- Footer / Social Media -->
+    <footer class="footer">
+        <div class="socials">
+
+            <a href="https://www.instagram.com/alieyamyr" target="_blank" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@svt7ws" target="_blank" class="social-link">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@TWS_PLEDIS" target="_blank" class="social-link">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+    </footer>
+
+</body>
+</html>
